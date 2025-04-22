@@ -15,7 +15,7 @@ function App() {
 
   const delete_session = async (e) => {
     try {
-      const delResponse = await fetch(`${backendURL}/restart`, {
+      const delResponse = await fetch(`api/restart`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -49,7 +49,7 @@ function App() {
     setUserInput('');
 
     try {
-      const response = await fetch(`${backendURL}/chat`, {
+      const response = await fetch(`api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
